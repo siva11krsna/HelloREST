@@ -1,10 +1,4 @@
 # Docker
-- task: ECRPushImage@1
-  inputs:
-    awsCredentials: 'AWSService'
-    regionName: 'us-east-1'
-    imageSource: 'imageid'
-    repositoryName: 'test-repo'
 # Build a Docker image 
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 trigger:
@@ -32,3 +26,9 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
         tags: |
           $(tag)
+    - task: ECRPushImage@1
+      inputs:
+        awsCredentials: 'AWSService'
+        regionName: 'us-east-1'
+        imageSource: 'imageid'
+        repositoryName: 'test-repo'          
