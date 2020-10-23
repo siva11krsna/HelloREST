@@ -19,15 +19,6 @@ stages:
     pool:
       vmImage: 'ubuntu-latest'
     steps:
-    - task: Maven@3
-      inputs:
-        mavenPomFile: 'pom.xml'
-        publishJUnitResults: false
-        javaHomeOption: 'JDKVersion'
-        mavenVersionOption: 'Default'
-        mavenAuthenticateFeed: false
-        effectivePomSkip: false
-        sonarQubeRunAnalysis: false    
     - task: Docker@2
       displayName: Build an image
       inputs:
@@ -38,5 +29,5 @@ stages:
       inputs:
         awsCredentials: 'AWSService'        
         regionName: 'us-east-1'
-        sourceImageName: 'hellorest-image:latest'
+        sourceImageName: 'hellorest-image'
         repositoryName: '756595446231.dkr.ecr.us-east-1.amazonaws.com/test-repo'
