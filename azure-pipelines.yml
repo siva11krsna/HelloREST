@@ -21,7 +21,7 @@ stages:
     steps:
     - task: Maven@3
       inputs:
-        mavenPomFile: 'HelloREST/pom.xml'
+        mavenPomFile: 'pom.xml'
         publishJUnitResults: false
         javaHomeOption: 'JDKVersion'
         mavenVersionOption: 'Default'
