@@ -29,5 +29,6 @@ stages:
       inputs:
         awsCredentials: 'AWSService'        
         regionName: 'us-east-1'
+        imageSource: 'imagename'        
         sourceImageName: 'hellorest-image'
         repositoryName: '756595446231.dkr.ecr.us-east-1.amazonaws.com/test-repo'
