@@ -33,3 +33,4 @@ stages:
       inputs:
         command: build
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
+        tags: helloRest-image
