@@ -33,10 +33,10 @@ stages:
       inputs:
         command: build
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
-        tags: helloRest-image
+        tags: hellorest-image
     - task: ECRPushImage@1
       inputs:
         awsCredentials: 'AWSService'        
         regionName: 'us-east-1'
-        sourceImageName: 'helloRest-image'
+        sourceImageName: 'hellorest-image'
         repositoryName: '756595446231.dkr.ecr.us-east-1.amazonaws.com/test-repo'
