@@ -34,4 +34,4 @@ stages:
         command: buildAndPush
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
         tags: helloRest-image
-        repository: test-rep756595446231.dkr.ecr.us-east-1.amazonaws.com/test-repo
+        repository: 756595446231.dkr.ecr.us-east-1.amazonaws.com/test-repo
